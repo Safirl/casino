@@ -58,8 +58,6 @@ void ACasinoGameCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 		// Moving
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ACasinoGameCharacter::Move);
 
-		// Looking
-		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ACasinoGameCharacter::Look);
 	}
 	else
 	{
