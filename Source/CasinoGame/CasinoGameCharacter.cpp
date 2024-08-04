@@ -109,9 +109,13 @@ void ACasinoGameCharacter::Move(const FInputActionValue& Value)
 			}
 		}
 
-		// If no obstacle is hit or the hit object is not an obstacle, proceed with movement
-		AddMovementInput(GetActorForwardVector(), MovementVector.Y);
-		AddMovementInput(GetActorRightVector(), MovementVector.X);
+		if (!IsDying)
+		{
+			// If no obstacle is hit or the hit object is not an obstacle, proceed with movement
+			AddMovementInput(GetActorForwardVector(), MovementVector.Y);
+			AddMovementInput(GetActorRightVector(), MovementVector.X);
+		}
+		
 	}
 }
 
